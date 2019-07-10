@@ -2,10 +2,10 @@
   "expo": {
     "name": "MAGNET",
     "slug": "magnet-app",
+    "version": "0.1.0",
     "privacy": "public",
     "sdkVersion": "33.0.0",
     "platforms": ["ios", "android", "web"],
-    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/Icon.png",
     "splash": {
@@ -17,8 +17,12 @@
       "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
+    "android": {
+      "package": "com.azobu.magnet"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.azobu.magnet"
     },
     "description": "MAGNET App",
     "githubUrl": "https://github.com/mhaidarh/magnet-app"
