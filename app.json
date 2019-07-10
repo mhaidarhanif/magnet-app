@@ -7,9 +7,9 @@
     "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/Icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/Splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -19,6 +19,8 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "MAGNET App",
+    "githubUrl": "https://github.com/mhaidarh/magnet-app"
   }
 }
