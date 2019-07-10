@@ -1,22 +1,53 @@
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import {
-  Image,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-} from 'react-native';
 
-import { Layout, Text, Button } from 'react-native-ui-kitten';
+import { Image, Platform, StyleSheet, Text, View } from 'react-native';
+import { Layout, Text as KText, Button } from 'react-native-ui-kitten';
+
+import Header from '../components/Header';
+
+const tags = [
+  {
+    name: 'JAPAN',
+    slug: 'japan',
+    primary: true,
+  },
+  {
+    name: 'SINGAPORE',
+    slug: 'singapore',
+  },
+  {
+    name: 'USA',
+    slug: '/usa',
+  },
+  {
+    name: 'CHINA',
+    slug: '/china',
+  },
+];
 
 export default function HomeScreen() {
   return (
     <Layout style={styles.container}>
-      <Text style={styles.text} category="h3">
+      <Header />
+
+      <KText style={styles.text} category="h3">
         MAGNET
-      </Text>
+      </KText>
+
+      {/* <Image source={require('/assets/images/Logo.png')} /> */}
+
+      <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+        {tags.map((tag, index) => {
+          return (
+            <Text key={index} style={{ marginRight: 10 }}>
+              {tag.primary && <Text style={styles.primaryDot}>•</Text>}
+              <Text>#{tag.name}</Text>
+            </Text>
+          );
+        })}
+      </View>
+
       <Button>Follow</Button>
     </Layout>
   );
@@ -49,18 +80,6 @@ function DevelopmentModeNotice() {
   }
 }
 
-function handleLearnMorePress() {
-  WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/workflow/development-mode/'
-  );
-}
-
-function handleHelpPress() {
-  WebBrowser.openBrowserAsync(
-    'https://docs.expo.io/versions/latest/workflow/up-and-running/#cant-see-your-changes'
-  );
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -70,6 +89,9 @@ const styles = StyleSheet.create({
   },
   text: {
     marginVertical: 16,
+  },
+  primaryDot: {
+    color: 'red',
   },
   developmentModeText: {
     marginBottom: 20,
