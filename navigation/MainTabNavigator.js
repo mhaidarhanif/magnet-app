@@ -86,27 +86,6 @@ UpdatesStack.path = '';
 
 // -----------------------------------------------------------------------------
 
-const MenuStack = createStackNavigator(
-  {
-    Menu: MenuScreen,
-  },
-  config
-);
-
-MenuStack.navigationOptions = {
-  tabBarLabel: 'Menu',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-menu' : 'md-menu'}
-    />
-  ),
-};
-
-MenuStack.path = '';
-
-// -----------------------------------------------------------------------------
-
 const SettingsStack = createStackNavigator(
   {
     Settings: SettingsScreen,
@@ -128,12 +107,33 @@ SettingsStack.path = '';
 
 // -----------------------------------------------------------------------------
 
+const MenuStack = createStackNavigator(
+  {
+    Menu: MenuScreen,
+  },
+  config
+);
+
+MenuStack.navigationOptions = {
+  tabBarLabel: 'Menu',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-menu' : 'md-menu'}
+    />
+  ),
+};
+
+MenuStack.path = '';
+
+// -----------------------------------------------------------------------------
+
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   ExploreStack,
   UpdatesStack,
-  MenuScreen,
   SettingsStack,
+  MenuStack,
 });
 
 tabNavigator.path = '';
