@@ -9,6 +9,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
+    "optimize": "expo optimize",
+    "publish": "expo publish",
     "eject": "expo eject",
     "test": "jest --watchAll"
   },
