@@ -1,14 +1,8 @@
 import React from 'react';
-import {
-  TopNavigation,
-  TopNavigationAction,
-  TopNavigationActionProps,
-} from 'react-native-ui-kitten';
+import { View } from 'react-native';
 
-const Header = (
-  props?: TopNavigationProps
-): React.ReactElement<TopNavigationProps> => {
-  return <TopNavigation title="MAGNET" />;
+const Header = () => {
+  return <View />;
 };
 
 export default Header;
