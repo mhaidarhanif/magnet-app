@@ -5,37 +5,20 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
 
-import { MonoText } from '../components/StyledText';
+import { Layout, Text, Button } from 'react-native-ui-kitten';
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
-        <View style={styles.welcomeContainer}>
-          <Image
-            source={
-              __DEV__
-                ? require('../assets/images/robot-dev.png')
-                : require('../assets/images/robot-prod.png')
-            }
-            style={styles.welcomeImage}
-          />
-        </View>
-
-        <View style={styles.getStartedContainer}>
-          <DevelopmentModeNotice />
-
-          <Text style={styles.getStartedText}>Get started by opening</Text>
-        </View>
-      </ScrollView>
-    </View>
+    <Layout style={styles.container}>
+      <Text style={styles.text} category="h3">
+        MAGNET
+      </Text>
+      <Button>Follow</Button>
+    </Layout>
   );
 }
 
@@ -81,7 +64,12 @@ function handleHelpPress() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: 20,
     backgroundColor: '#fff',
+    alignItems: 'center',
+  },
+  text: {
+    marginVertical: 16,
   },
   developmentModeText: {
     marginBottom: 20,

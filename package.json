@@ -18,6 +18,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@eva-design/eva": "1.0.1",
     "@expo/samples": "~3.0.0",
     "@expo/vector-icons": "^10.0.1",
     "@react-navigation/web": "^1.0.0-alpha.9",
@@ -26,10 +27,10 @@
     "expo-constants": "^5.0.0",
     "expo-font": "^5.0.0",
     "expo-web-browser": "^5.0.0",
-    "galio-framework": "0.5.3",
     "react": "16.8.3",
     "react-dom": "^16.8.6",
     "react-native": "https://github.com/expo/react-native/archive/sdk-33.0.0.tar.gz",
+    "react-native-ui-kitten": "4.0.5",
     "react-native-web": "^0.11.4",
     "react-navigation": "^3.11.0"
   },
